@@ -1,0 +1,24 @@
+{
+  "name": "api-receitas",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "reset": "knex migrate:rollback --all && knex migrate:latest && knex seed:run"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "knex": "^2.5.1",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.4.0",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
